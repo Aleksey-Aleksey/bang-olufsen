@@ -1,0 +1,44 @@
+@use '../utils/mixins.scss' as *;
+@use '../utils/variables.scss' as *;
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 28px;
+
+  @include onTablet {
+    padding-block: 32px;
+  }
+
+  &__logo-link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-img {
+    height: 16px;
+    width: 152px;
+    transition: $transition-time;
+    transform-origin: center;
+    will-change: transform;
+
+    @include onTablet {
+      width: 228px;
+      height: 24px;
+    }
+
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 24px;
+
+    @include onTablet {
+      gap: 32px;
+    }
+  }
+}

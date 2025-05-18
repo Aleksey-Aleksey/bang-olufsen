@@ -1,0 +1,45 @@
+@use '../utils/mixins.scss' as *;
+@use '../utils/variables.scss' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  
+  &__field {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.15px;
+    color:#7E7E83;
+
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    height: 48px;
+    padding: 14px;
+    border: 2px solid transparent;
+    transition: $transition-time;
+    outline: none;
+
+    &:not(:placeholder-shown) {
+      color: $text-main-color;
+    }
+
+    &:hover {
+      border-color:#DBDBDB;
+      color: $text-main-color;
+    }
+
+    &:focus {
+      border: 2px solid#F98921;
+      color: $text-main-color;
+    }
+
+    &--message {
+      margin-bottom: 32px;
+      resize: none;
+      height: 148px;
+    }
+  }
+}

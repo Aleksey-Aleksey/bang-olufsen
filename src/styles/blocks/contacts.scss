@@ -1,0 +1,32 @@
+@use '../utils/mixins.scss' as *;
+
+.contacts {
+  &__content {
+    @include pageGrid;
+    row-gap: 48px;
+
+    @include onTablet {
+      row-gap: 80px;
+    }
+
+    @include onDesktop {
+      row-gap: 0;
+    }
+  }
+
+  &__form-content {
+    grid-column: 1 / -1;
+
+    @include onDesktop {
+      grid-column: 1 / 7;
+    }
+  }
+
+  &__info-content {
+    grid-column: 1 / -1;
+
+    @include onDesktop {
+      grid-column: 8 / 12;
+    }
+  }
+}

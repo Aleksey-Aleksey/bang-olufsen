@@ -1,0 +1,21 @@
+@use './styles/utils/mixins.scss';
+
+@use './styles/utils/normalize.scss';
+@use './styles/blocks/page.scss';
+@use './styles/utils/width-container.scss';
+@use './styles/blocks/top-bar.scss';
+@use './styles/blocks/header.scss';
+@use './styles/blocks/icons.scss';
+@use './styles/blocks/menu.scss';
+@use 'styles/blocks/nav.scss';
+@use './styles/blocks/main.scss';
+@use './styles/blocks/section.scss';
+@use './styles/blocks/recommended.scss';
+@use './styles/blocks/categories.scss';
+@use './styles/blocks/category.scss';
+@use './styles/blocks/button.scss';
+@use './styles/blocks/product.scss';
+@use './styles/blocks/about-us.scss';
+@use './styles/blocks/contacts.scss';
+@use './styles/blocks/form.scss';
+@use './styles/blocks/contacts-info.scss';

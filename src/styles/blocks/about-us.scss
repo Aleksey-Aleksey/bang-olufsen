@@ -1,0 +1,62 @@
+@use '../utils/mixins.scss' as *;
+
+.about-us {
+  background: #fcfaef;
+  
+  &__biPhoto {
+    background-image: url(images/aboutUs-3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    
+    @include onTablet {
+      height: 400px;
+    }
+    
+    @include onDesktop {
+      height: 460px;
+    }
+  }
+
+  &__content {
+    @include pageGrid;
+
+    padding-block: 48px;
+
+    @include onTablet {
+      padding-block: 120px;
+    }
+  }
+  
+  &__title {
+    grid-column: 1 / -1;
+    
+    margin-bottom: 24px;
+
+    @include onTablet {
+      margin-bottom: 0;
+      grid-column: span 3;
+    }
+
+    @include onDesktop {
+      grid-column: span 6;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.15px;
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      grid-column: 4 / -1;
+    }
+
+    @include onDesktop {
+      grid-column: 8 / -1;
+    } 
+  }
+}

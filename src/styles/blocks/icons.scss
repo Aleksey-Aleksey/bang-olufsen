@@ -1,0 +1,38 @@
+@use '../utils/mixins.scss' as *;
+@use '../utils/variables.scss' as *;
+
+.icon {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: $transition-time;
+  will-change: transform;
+  transform-origin: center;
+
+  @include onTablet {
+    width: 32px;
+    height: 32px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &--phone {
+    background-image: url(images/icons/icon-phone.svg);
+  }
+
+  &--menu {
+    background-image: url(images/icons/Icon-Burger-menu.svg);
+
+    &:hover {
+      background-image: url(images/icons/Icon-Burger-menu-hover.svg);
+    }
+  }
+
+  &--close {
+    background-image: url(images/icons/Icon-Close.svg);
+  }
+}
